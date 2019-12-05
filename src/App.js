@@ -1,12 +1,20 @@
 import React from 'react';
-import Header from './components/Header/';
+import LayoutHeader from './components/Header';
 import { renderRoutes } from 'react-router-config';
-import { actions } from './components/Header/store/';
 
+
+/**
+ * 
+ * 路由 / 入口文件
+ * 这里 做的主要是 
+ * 1. 页面的 Layout 功能
+ * 2. 渲染当前路径下面的 子路由
+ */
 const App = (props) => {
+  console.log('props', props);
   return (
     <div>
-      <Header staticContext={props.staticContext} />
+      <LayoutHeader staticContext={props.staticContext} />
       {renderRoutes(props.route.routes)}
     </div>
   )

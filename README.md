@@ -17,3 +17,8 @@ node-api
 假如fe 出错了 有可能是 node server 也有可能是 api server
 介入中间层 中转 fe 出错 直接找 node 然后 node 出错 就再找 api server
 
+## 多级路由嵌套
+简单一层路由： 可以简单使用 map
+多级路由采用： react-router-config 提供的 renderRoutes
+
+

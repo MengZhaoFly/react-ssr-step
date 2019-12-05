@@ -17,7 +17,6 @@ class Home extends Component {
     console.log('commentList', commentList);
     return (
       <div>
-        <Header />
         hotComment:
         <ul>
           {

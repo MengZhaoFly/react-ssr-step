@@ -14,9 +14,7 @@ export const render = (req, store, routes) => {
       </StaticRouter>
     </Provider>
   )
-  console.log('App------', App, 'req.path:', req.path);
   const content = renderToString(App);
-  console.log('content------', content);
   return `
 			<html>
         <head>
