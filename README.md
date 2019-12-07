@@ -22,3 +22,14 @@ node-api
 多级路由采用： react-router-config 提供的 renderRoutes
 
 
+## 涉及登录的时候
+服务端 cookie 处理
+把 req 传递给 axiosIns
+
+## 404 处理
+服务端：context 传递 一个对象 {}
+组件
+获取 staticContext 在里面添加一个 { notFound: true}
+然后 服务端再次判断 决定 404 还是 200
+
+

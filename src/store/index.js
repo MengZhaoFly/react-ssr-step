@@ -8,8 +8,8 @@ import serverAxios from '../server/request';
 // 假如果 这样导出 每一个 store 都是一样的 单例的 应该每一个用户创建一次
 // const store = createStore(reducer, applyMiddleware(thunk));
 
-export const getStore = () => {
-  return createStore(reducer, applyMiddleware(thunk.withExtraArgument(serverAxios)));
+export const getStore = (req) => {
+  return createStore(reducer, applyMiddleware(thunk.withExtraArgument(serverAxios(req))));
 }
 
 export const getClientStore = () => {

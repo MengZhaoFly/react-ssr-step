@@ -12,10 +12,10 @@ export const getCommentList = function() {
   // api/  === 服务器/api
   return (dispatch, getState, axiosInstance) => {
     // axiosInstance 即是 请求时候的主体 [ 客户端 | 服务端 ]
-    return axiosInstance.get('/comment/music?id=186016&limit=1')
+    return axiosInstance.get('/comment')
     .then(res => {
       // console.log('res', res);
-      const commentList = res.data.hotComments;
+      const commentList = res.data.list;
       dispatch(commentListActionCreate(commentList));
     })
   }
