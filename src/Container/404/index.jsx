@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
 class NotFound extends Component {
-  render() { 
-    console.log(this.props);
+  render() {
     if (this.props.staticContext) {
       this.props.staticContext.notFound = true
     }

@@ -11,16 +11,20 @@ export const render = (req, store, routes, context) => {
       <StaticRouter location={req.path} 
       context={context}>
         <div>
-          {renderRoutes(routes)}
+          { renderRoutes(routes) }
         </div>
       </StaticRouter>
     </Provider>
   )
   const content = renderToString(App);
+  const cssStr = context.css || ''
   return `
 			<html>
         <head>
-        <title>title</title>
+          <title>title</title>
+          <style>
+          ${cssStr}
+          </style>
 				</head>
 				<body>
 					<div id="root">${content}</div>

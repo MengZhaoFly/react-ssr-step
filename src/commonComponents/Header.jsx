@@ -14,6 +14,7 @@ class Header extends Component {
         <Link to="/login"
         onClick={handleLogin}
         >login</Link>
+        <Link to="/detail">detail</Link>
         <br />
         {!islogin && <button to="/login"
         onClick={handleLogin}
@@ -21,7 +22,7 @@ class Header extends Component {
         <br />
         {islogin && (
           <>
-            <Link to="/login">进详情页面</Link>
+            <Link to="/detail">进详情页面</Link>
             <br />
             <button onClick={handleLogout}>退出</button>
           </>

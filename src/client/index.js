@@ -13,7 +13,7 @@ const App = function() {
 		<Provider store={store}>
 			<BrowserRouter>
 				<div>
-					{renderRoutes(routes)}
+					{ renderRoutes(routes) }
 	    	</div>
 			</BrowserRouter>
 		</Provider>
